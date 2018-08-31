@@ -27,4 +27,4 @@ This repo consists of a simple web application with a couple endpoints. Also my 
 ## Running the server
 
 + For an interactive shell to easily manually test, run `./bin/start.sh`
-+ To simply run the server `go build && ./golang-exercise
++ To simply run the server `go build && ./golang-exercise`
