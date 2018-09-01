@@ -139,7 +139,7 @@ func makeState() Server {
 			case req := <-shutdownOpC:
 				if !req.should {
 					req.resp <- isShuttingDown
-					breaks
+					break
 				}
 				isShuttingDown = true
 				if len(pending) == 0 {

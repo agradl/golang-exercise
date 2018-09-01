@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/bash -e
 
 trap "kill 0" EXIT
-
-cd ~/go/src/github.com/agradl/golang-exercise && go build && ./golang-exercise &
+go build
+./golang-exercise &
 
 listOptions(){
     echo "Choose from the following commands: "
@@ -30,6 +30,7 @@ while true; do
         sleep .2
         kill -0 $! &> /dev/null
         if [ "$?" != "0" ]; then
+            echo "build failed"
             exit 1
         fi
 done
